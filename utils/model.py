@@ -1,6 +1,9 @@
 import numpy as np
+import logging
+from tqdm import tqdm
 
-
+logging_str="[%(asctime)s:%(levelname)s:%(module)s] %(message)s"
+logging.basicConfig()
 class Perceptron:
   def __init__(self, eta, epochs):
     self.weights = np.random.randn(3) * 1e-4 # SMALL WEIGHT INIT
